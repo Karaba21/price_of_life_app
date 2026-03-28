@@ -7,6 +7,17 @@ class ResultCard extends StatelessWidget {
 
   const ResultCard({super.key, this.result});
 
+  String _getSecondaryText(TimeResult res) {
+    if (res.unit == 'MONTHS') {
+      final weeks = res.totalHours / (CalculatorUtils.hoursPerDay * CalculatorUtils.workDaysPerWeek);
+      return '≈ ${weeks.toStringAsFixed(1)} weeks of deep work';
+    } else if (res.unit == 'WEEKS') {
+      final days = res.totalHours / CalculatorUtils.hoursPerDay;
+      return '≈ ${days.toStringAsFixed(1)} days of deep work';
+    }
+    return '≈ ${res.totalHours.toStringAsFixed(1)} hours of deep work';
+  }
+
   @override
   Widget build(BuildContext context) {
     if (result == null) {
@@ -18,7 +29,7 @@ class ResultCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(32),
           boxShadow: [
             BoxShadow(
-              color: AppTheme.primaryBlue.withOpacity(0.3),
+              color: AppTheme.primaryBlue.withValues(alpha: 0.3),
               blurRadius: 24,
               offset: const Offset(0, 12),
             ),
@@ -50,7 +61,7 @@ class ResultCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(32),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.primaryBlue.withOpacity(0.3),
+            color: AppTheme.primaryBlue.withValues(alpha: 0.3),
             blurRadius: 24,
             offset: const Offset(0, 12),
           ),
@@ -106,11 +117,11 @@ class ResultCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Text(
-              '≈ ${result!.totalHours.toStringAsFixed(1)} hours of deep work',
+              _getSecondaryText(result!),
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
