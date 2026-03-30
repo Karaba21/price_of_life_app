@@ -48,7 +48,7 @@ class HomeScreen extends ConsumerWidget {
                       textAlign: TextAlign.center,
                       text: TextSpan(
                         style: const TextStyle(
-                          fontSize: 48,
+                          fontSize: 30,
                           fontWeight: FontWeight.w900,
                           color: AppTheme.textDark,
                           height: 1.1,
