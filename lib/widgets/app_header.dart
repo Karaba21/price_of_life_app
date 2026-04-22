@@ -12,24 +12,21 @@ class AppHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(
-            icon: const Icon(Icons.settings, size: 28),
-            onPressed: onSettingsPressed,
-            color: Theme.of(context).colorScheme.onSurface,
-          ),
+          const SizedBox(width: 48),
+
           const Text(
-            'Price in Life',
+            'How much is your life worth?',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
               letterSpacing: -0.5,
             ),
           ),
-          const CircleAvatar(
-            radius: 20,
-            backgroundColor: Color(0xFFEFF6FF), // Light blue
-            child: Icon(Icons.person_outline, color: Color(0xFF2563EB)),
-          ),
+          IconButton(
+            icon: const Icon(Icons.settings, size: 28),
+            onPressed: onSettingsPressed,
+            color: Theme.of(context).colorScheme.onSurface,
+          ), // Placeholder for spacing
         ],
       ),
     );

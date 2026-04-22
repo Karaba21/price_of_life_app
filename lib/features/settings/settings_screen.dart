@@ -126,7 +126,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               height: 56,
               child: ElevatedButton(
                 onPressed: _saveSalary,
-                child: const Text('Save Changes'),
+                child: const Text(
+                  'Save Changes',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             const SizedBox(height: 64),
