@@ -78,14 +78,18 @@ class _BuyMeACoffeeButtonState extends State<BuyMeACoffeeButton>
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.favorite_rounded, color: Color(0xFF5D4037), size: 20),
+              const Icon(
+                Icons.favorite_rounded,
+                color: Color(0xFF5D4037),
+                size: 20,
+              ),
               const SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text(
-                    'Support this app',
+                    'Support my apps',
                     style: TextStyle(
                       color: Color(0xFF4E342E),
                       fontSize: 15,

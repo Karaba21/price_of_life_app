@@ -16,7 +16,7 @@ class AppHeader extends StatelessWidget {
 
           Flexible(
             child: Text(
-              'How much is your life worth?',
+              'Is it worth your effort?',
               textAlign: TextAlign.center,
               overflow: TextOverflow.visible,
               style: TextStyle(
