@@ -38,7 +38,7 @@ class HomeScreen extends ConsumerWidget {
                   );
                 },
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 12),
 
               // Hero Section
               Padding(
@@ -56,7 +56,7 @@ class HomeScreen extends ConsumerWidget {
                         );
                       },
                     ),
-                    const SizedBox(height: 32),
+                    const SizedBox(height: 16),
 
                     PriceInputCard(onChanged: homeNotifier.onInputChanged),
 

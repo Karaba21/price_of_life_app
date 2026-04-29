@@ -14,12 +14,16 @@ class AppHeader extends StatelessWidget {
         children: [
           const SizedBox(width: 48),
 
-          const Text(
-            'How much is your life worth?',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              letterSpacing: -0.5,
+          Flexible(
+            child: Text(
+              'How much is your life worth?',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.visible,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                letterSpacing: -0.5,
+              ),
             ),
           ),
           IconButton(
